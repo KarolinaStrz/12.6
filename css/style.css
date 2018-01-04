@@ -1,0 +1,41 @@
+body {
+	margin: 0px auto;
+	background-color: white;
+	text-align: center;
+	text-decoration: none;
+}
+.search-panel {
+	background-color:  white;
+	padding: 20px;
+	text-align: center;
+}
+ul {
+	text-align: justify; 
+	padding-bottom: 4px;
+    display: inline-grid;
+    padding: 10px 20px;
+}
+li {
+	font-size: 20px;
+	list-style: none;
+	padding: 10px 20px;
+	background-color: #ffe789;
+	
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+.country-info {
+	padding: 20px;
+}
+#info {
+	text-decoration: none;
+	background-color: white;
+}

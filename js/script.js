@@ -23,17 +23,17 @@ function showCountriesList(resp) {
 }
 
 function showCountriesList(resp) {
-    countriesList.empty();
-    resp.forEach(function(item) {
-        //Here is the code that will execute on each successive item in the collection. A single item is hidden under an item variable.
-    });
-		resp.forEach(function(item){
-   		$('<li>').text(item.name + item.flag).appendTo(countriesList);
-		$('<ul>').text('Capital: ' + item.capital).appendTo(countriesList);
-		$('<ul>').text('Land area: ' + item.area).appendTo(countriesList);
-		$('<ul>').text('Population: ' + item.population).appendTo(countriesList);
-		$('<ul>').text('Languages: ' + item.languages).appendTo(countriesList);
-		$('<ul>').text('Currencies: ' + item.currencies).appendTo(countriesList);
-	});
+countriesList.empty();
+resp.forEach(function(item){
+$('<ul>').text(item.name).appendTo(countriesList);
+var FlagCode = item.alpha2Code.toLowerCase();
+$('<li>').html('<img srcset="https://flags.fmcdn.net/data/flags/h40/' + FlagCode + '.png 15x" src="https://flags.fmcdn.net/data/flags/h20/' + FlagCode + '.png">').appendTo(countriesList);
+$('<li>').text('Capital: ' + item.capital).appendTo(countriesList);
+$('<li>').text('Land area: ' + item.area).appendTo(countriesList);
+$('<li>').text('Population: ' + item.population).appendTo(countriesList);
+$('<li>').text('Languages: ' + item.languages).appendTo(countriesList);
+
+
+});
 
 }
